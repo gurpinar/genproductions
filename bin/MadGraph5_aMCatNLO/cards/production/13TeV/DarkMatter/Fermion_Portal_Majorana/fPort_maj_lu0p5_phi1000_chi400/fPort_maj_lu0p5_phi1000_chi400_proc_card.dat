@@ -37,8 +37,8 @@ define vl~ = ve~ vm~ vt~
 import model Fermion_Portal_Majorana_UFO
 define fp = ur cr dr sr
 define fp~ = ur~ cr~ dr~ sr~
-generate  p p > n1 n1 j dmscalar=0 dmpscalar=0 dmvector=0 dmpvector=1 \
-@1
-add process p p > fp fp~, (fp > n1 j), (fp~ > n1 j) dmscalar=0 dmpscal\
-ar=0 dmvector=0 dmpvector=1 @2
+generate  p p > n1 n1 j dmscalar=0 dmpscalar=0 dmvector=0 dmpvector=1 @1
+add process p p > fp fp~, (fp > n1 j), (fp~ > n1 j) dmscalar=0 dmpscalar=0 dmvector=0 dmpvector=1 @2
+add process p p > fp fp, (fp > n1 j) dmscalar=0 dmpscalar=0 dmvector=0 dmpvector=1 @3
+add process p p > fp~ fp~, (fp~ > n1 j) dmscalar=0 dmpscalar=0 dmvector=0 dmpvector=1 @4
 output fPort_maj_lu0p5_phi1000_chi400
